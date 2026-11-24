@@ -1,20 +1,10 @@
 // Registro central. Edite somente a entrada da sua equipe.
 // Logos e protótipos próprios também podem ficar em src/teams/equipe-XX/.
+import mollireLogo from "../teams/equipe-07/assets/mollire.svg";
+import mollirePreview from "../teams/equipe-07/assets/mollire-preview.jpg";
+import mollireTitleLogo from "../teams/equipe-07/assets/mollire-logo-light.svg";
+
 export const teamsConfig = [
-  {
-    id: "equipe-01",
-    number: "01",
-    name: "Equipe 01",
-    category: "Projeto da turma",
-    description:
-      "A apresentação deste projeto está sendo preparada pela equipe. Em breve, este espaço reunirá a descrição do site, a imagem do protótipo e o link da aplicação publicada.",
-    ready: false,
-    logo: "/projects/equipe-01.svg",
-    prototype: "",
-    prototypeAlt: "",
-    prototypeCaption: "",
-    deployUrl: "",
-  },
   {
     id: "equipe-02",
     number: "02",
@@ -85,5 +75,20 @@ export const teamsConfig = [
     prototypeCaption:
       "Interface publicada do MedTrack.",
     deployUrl: "https://medtrackapp.vercel.app",
+  },
+  {
+    id: "equipe-07",
+    number: "07",
+    name: "Mollire",
+    category: "Infraestrutura e deploy",
+    description:
+      "Plataforma para publicar frontends estáticos a partir de repositórios Git. Cada projeto ganha um subdomínio, histórico de deploys com logs, monitoramento de disponibilidade e espaço nas turmas para submissão e avaliação.",
+    ready: true,
+    logo: mollireLogo,
+    titleLogo: mollireTitleLogo,
+    prototype: mollirePreview,
+    prototypeAlt: "Captura da página inicial publicada do Mollire",
+    prototypeCaption: "Página inicial do Mollire em produção.",
+    deployUrl: "https://mollire.com.br",
   },
 ];

@@ -46,7 +46,17 @@ export default function ProjectModal({ project, onClose }) {
         </button>
         <img className="dialog-logo" src={project.logo} alt="" />
         <p className="eyebrow">{project.category}</p>
-        <h2 id="project-title">{project.name}</h2>
+        <h2 id="project-title">
+          {project.titleLogo ? (
+            <img
+              src={project.titleLogo}
+              alt={project.name}
+              style={{ display: "block", height: "3.4rem", width: "auto", maxWidth: "100%" }}
+            />
+          ) : (
+            project.name
+          )}
+        </h2>
         <p id="project-description">{project.description}</p>
         <figure className="prototype-figure">
           {project.prototype ? (

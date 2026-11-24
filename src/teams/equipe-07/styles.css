@@ -1,0 +1,161 @@
+.equipe07 {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.equipe07 .back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #175bb5;
+}
+.equipe07 h1 {
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  margin: 1rem 0;
+}
+.equipe07 h1 span {
+  color: #2a74da;
+}
+.equipe07-intro {
+  max-width: 44rem;
+  font-size: 1.2rem;
+  color: #586a80;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+.equipe07-panel {
+  padding: 2rem;
+  border: 1px solid #dce7f5;
+  border-radius: 1rem;
+  background: white;
+}
+.equipe07-panel p {
+  line-height: 1.7;
+  color: #586a80;
+}
+.equipe07-panel h2 {
+  margin-top: 0;
+}
+
+.equipe07-about {
+  margin-top: 2.5rem;
+}
+
+.equipe07-flow,
+.equipe07-members {
+  margin-top: 3rem;
+}
+.equipe07-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.equipe07-steps h3 {
+  margin: 0.4rem 0 0;
+  letter-spacing: -0.025em;
+}
+.equipe07-step-number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #2a74da;
+}
+.equipe07-stack {
+  margin-top: 1.2rem;
+  line-height: 1.7;
+  color: #586a80;
+}
+
+.equipe07-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 0.6rem;
+}
+.equipe07-video {
+  margin-top: 3rem;
+}
+
+.equipe07-team-text {
+  line-height: 1.7;
+  color: #586a80;
+}
+.equipe07-team {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+.equipe07-photo {
+  width: 100%;
+  height: 100%;
+  max-height: 34rem;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 1px solid #dce7f5;
+  border-radius: 1rem;
+  display: block;
+}
+.equipe07-member-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-content: space-between;
+}
+.equipe07-member-grid .equipe07-panel {
+  padding: 1.4rem 1.8rem;
+}
+.equipe07-member-grid .equipe07-panel p {
+  margin: 0.3rem 0 0;
+}
+.equipe07-member-grid h3 {
+  margin-top: 0;
+  letter-spacing: -0.025em;
+}
+
+.equipe07-aedria {
+  margin-top: 1rem;
+  padding: 1.6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border: 1px solid #c9dbf3;
+  border-radius: 1rem;
+  background: #edf4ff;
+}
+.equipe07-aedria h3 {
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+.equipe07-aedria p {
+  margin: 0.4rem 0 0;
+  line-height: 1.6;
+  color: #586a80;
+}
+.equipe07-aedria .button {
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .equipe07-steps,
+  .equipe07-team {
+    grid-template-columns: 1fr;
+  }
+  .equipe07-photo {
+    height: auto;
+    max-height: 26rem;
+  }
+  .equipe07-panel {
+    padding: 1.3rem;
+  }
+  .equipe07-aedria {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.3rem;
+  }
+}
