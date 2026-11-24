@@ -76,3 +76,11 @@ fechar e clique fora da janela permitem retornar à vitrine.
 Cada entrada em `teamsConfig.js` inclui `logo`, `prototype`, `prototypeAlt`,
 `prototypeCaption` e `deployUrl`. As equipes 01 a 05 usam marcas provisórias e não
 possuem links de deploy inventados. A imagem do MedTrack é uma captura real da homepage publicada.
+
+
+## Identidade visual
+
+A vitrine utiliza a logo horizontal da Universidade de Fortaleza, obtida no site
+institucional: https://unifor.br/o/unifor-theme/images/unifor-logo-horizontal.svg.
+O arquivo original está em `public/brand/unifor.svg`, sem redesenho ou alteração de cores.
+A aplicação é um projeto acadêmico da turma.

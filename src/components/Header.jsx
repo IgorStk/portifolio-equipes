@@ -10,12 +10,13 @@ export default function Header() {
           className="brand"
           to="/"
           onClick={() => setOpen(false)}
-          aria-label="Coletivo, início"
+          aria-label="Universidade de Fortaleza — início"
         >
-          <span className="brand-icon" aria-hidden="true">
-            c.
-          </span>
-          coletivo<span className="brand-dot">.</span>
+          <img
+            className="unifor-logo"
+            src="/brand/unifor.svg"
+            alt="Universidade de Fortaleza"
+          />
         </Link>
         <button
           className="menu-toggle"
@@ -51,7 +52,7 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
           >
-            Repositório <span aria-hidden="true">↗</span>
+            GitHub
           </a>
         </nav>
       </div>

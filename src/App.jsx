@@ -8,7 +8,7 @@ export default function App() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
     document.title =
-      pathname === "/" ? "Coletivo — Portfólio da turma" : "Equipes — Coletivo";
+      pathname === "/" ? "Portfólio de Projetos | Unifor" : "Equipes | Unifor";
     if (!hash) window.scrollTo(0, 0);
   }, [pathname, hash]);
   return (

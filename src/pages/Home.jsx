@@ -10,14 +10,14 @@ export default function Home() {
     <>
       <section className="portfolio-landing container" id="equipes">
         <div className="portfolio-intro">
-          <p className="eyebrow">PORTFÓLIO COLETIVO · DESENVOLVIMENTO WEB</p>
+          <p className="eyebrow">DESENVOLVIMENTO WEB · UNIFOR</p>
           <h1>
-            Seis projetos.
+            Projetos da turma.
             <br />
-            <span>Um coletivo de ideias.</span>
+            <span>Seis equipes, novas ideias.</span>
           </h1>
           <p>
-            Conheça os projetos da turma.
+            Explore as entregas da turma.
             <br />
             Selecione uma logo para explorar cada experiência.
           </p>
@@ -42,7 +42,7 @@ export default function Home() {
           ))}
         </div>
         <p className="portfolio-hint">
-          Da primeira ideia ao site publicado. Feito em equipe.
+          Selecione um projeto para conhecer a proposta.
         </p>
       </section>
       <section id="sobre" className="portfolio-about container">
