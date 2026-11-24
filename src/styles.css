@@ -1,0 +1,400 @@
+:root {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #182434;
+  background: #fff;
+  font-synthesis: none;
+  font-size: 16px;
+  --primary: #004a8f;
+  --muted: #697586;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+}
+button,
+input {
+  font: inherit;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #427eb6;
+  outline-offset: 5px;
+}
+.container {
+  max-width: 1160px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+h1,
+h2,
+h3 {
+  letter-spacing: -0.045em;
+}
+h2 {
+  font-size: 1.8rem;
+}
+.site-header {
+  border-bottom: 1px solid #edf0f3;
+  background: white;
+}
+.header-inner {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.brand {
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
+}
+.unifor-logo {
+  width: 190px;
+  height: 46px;
+  display: block;
+  object-fit: contain;
+  object-position: left center;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+.navigation a {
+  font-size: 0.9rem;
+  color: #667282;
+  text-decoration: none;
+}
+.navigation a:hover,
+.navigation a.active {
+  color: #004a8f;
+}
+.navigation .nav-repository {
+  color: #004a8f;
+}
+.menu-toggle {
+  display: none;
+}
+.eyebrow {
+  color: #60758e;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  line-height: 1.8;
+}
+.portfolio-landing {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+.portfolio-intro {
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto 2.5rem;
+}
+.portfolio-intro h1 {
+  font-size: clamp(2.3rem, 4vw, 3.25rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 1rem 0;
+}
+.portfolio-intro h1 span {
+  color: #175bb5;
+  font-weight: 400;
+}
+.portfolio-intro > p:last-child {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+.project-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+.project-logo-card {
+  width: 100%;
+  height: 175px;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  background: white;
+  border: 1px solid #dce7f5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    border-color 0.18s,
+    background 0.18s;
+}
+.project-logo-card:hover {
+  border-color: #4985ce;
+  background: #edf4ff;
+}
+.project-logo-card img {
+  width: 100%;
+  max-width: 270px;
+  height: 85px;
+  object-fit: contain;
+}
+.portfolio-hint {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #84909c;
+  margin: 1.5rem 0 0;
+}
+.portfolio-about {
+  text-align: center;
+  padding-block: 2.5rem;
+  max-width: 760px;
+}
+.portfolio-about > p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.site-footer {
+  border-top: 1px solid #edf0f3;
+  margin-top: 1.5rem;
+  padding-block: 1.3rem;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.footer-inner p {
+  color: #83909c;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.2rem;
+  border: 0;
+  background: #004a8f;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.button:hover {
+  background: #003b73;
+}
+.project-dialog {
+  width: min(760px, calc(100vw - 2rem));
+  max-height: 88dvh;
+  overflow: auto;
+  padding: 0;
+  border: 1px solid #dce7f5;
+  border-radius: 12px;
+  color: #182434;
+  background: #fff;
+  box-shadow: 0 20px 80px #15233233;
+}
+.project-dialog::backdrop {
+  background: #17233088;
+  backdrop-filter: blur(3px);
+}
+.project-dialog-content {
+  padding: 2.5rem;
+  position: relative;
+}
+.dialog-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #f1f4f7;
+  color: #526070;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.dialog-logo {
+  display: block;
+  width: 210px;
+  height: 70px;
+  object-fit: contain;
+  object-position: left;
+  margin: 0 0 1.5rem -15px;
+}
+.project-dialog h2 {
+  margin: 0.5rem 0 1rem;
+}
+#project-description {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.prototype-figure {
+  margin: 1.7rem 0 0;
+}
+.prototype-figure > img {
+  display: block;
+  width: 100%;
+  border: 1px solid #e4e9ee;
+  border-radius: 6px;
+}
+.prototype-figure figcaption {
+  color: #83909c;
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+  line-height: 1.6;
+}
+.prototype-placeholder {
+  min-height: 230px;
+  padding: 2rem;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: #f7f9fb;
+  border: 1px dashed #d3dce4;
+  border-radius: 6px;
+  color: #83909c;
+}
+.prototype-placeholder > span {
+  font-size: 2.5rem;
+}
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.project-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.project-actions > a:not(.button) {
+  font-size: 0.9rem;
+  color: #4b6e92;
+}
+.empty-state {
+  padding-block: 5rem;
+  min-height: 65vh;
+}
+.empty-state h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.empty-state p {
+  color: var(--muted);
+  max-width: 40rem;
+  line-height: 1.8;
+}
+.empty-state .button {
+  margin-top: 1rem;
+}
+.loading-state {
+  padding-block: 5rem;
+}
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  background: #004a8f;
+  color: white;
+  padding: 1rem;
+  z-index: 20;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    padding-inline: 1.25rem;
+  }
+  .header-inner {
+    height: 82px;
+  }
+  .unifor-logo {
+    width: 160px;
+    height: 42px;
+  }
+  .navigation {
+    gap: 1rem;
+  }
+  .navigation a {
+    font-size: 0.8rem;
+  }
+  .portfolio-landing {
+    padding-top: 2.5rem;
+  }
+  .project-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+  }
+  .project-logo-card {
+    height: 140px;
+    padding: 1rem;
+  }
+  .project-dialog-content {
+    padding: 1.5rem;
+  }
+  .footer-inner {
+    display: block;
+  }
+}
+@media (max-width: 520px) {
+  .header-inner {
+    position: relative;
+  }
+  .menu-toggle {
+    display: block;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #e1e7ed;
+    border-radius: 4px;
+    background: white;
+    color: #526070;
+  }
+  .navigation {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    top: 82px;
+    left: 0;
+    right: 0;
+    padding: 1.25rem;
+    background: white;
+    border-bottom: 1px solid #e3e8ed;
+  }
+  .navigation.open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+@media (max-width: 380px) {
+  .project-logo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-logo-card { background: #f8fbff; }
+.portfolio-intro .eyebrow { color: #175bb5; }
