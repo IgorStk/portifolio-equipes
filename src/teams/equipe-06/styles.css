@@ -5,7 +5,7 @@
 .equipe06 .back-link {
   display: inline-block;
   margin-bottom: 2rem;
-  color: #47634f;
+  color: #175bb5;
 }
 .equipe06 h1 {
   font-size: clamp(2.6rem, 6vw, 4.6rem);
@@ -16,7 +16,7 @@
 .equipe06-intro {
   max-width: 44rem;
   font-size: 1.2rem;
-  color: #5b6660;
+  color: #586a80;
   line-height: 1.7;
 }
 .equipe06-columns {
@@ -27,13 +27,13 @@
 }
 .equipe06-panel {
   padding: 2rem;
-  border: 1px solid #d9dfd7;
+  border: 1px solid #dce7f5;
   border-radius: 1rem;
   background: white;
 }
 .equipe06-panel p {
   line-height: 1.7;
-  color: #58635c;
+  color: #586a80;
 }
 .equipe06-panel h2 {
   margin-top: 0;
@@ -45,7 +45,7 @@
   justify-content: center;
   min-height: 220px;
   text-align: center;
-  background: #e9eee5;
+  background: #edf4ff;
   border-radius: 0.7rem;
   padding: 1.5rem;
 }

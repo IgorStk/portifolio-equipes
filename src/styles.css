@@ -9,7 +9,7 @@
   background: #fff;
   font-synthesis: none;
   font-size: 16px;
-  --green: #004a8f;
+  --primary: #004a8f;
   --muted: #697586;
 }
 * {
@@ -110,7 +110,7 @@ h2 {
   margin: 1rem 0;
 }
 .portfolio-intro h1 span {
-  color: #7c8795;
+  color: #175bb5;
   font-weight: 400;
 }
 .portfolio-intro > p:last-child {
@@ -132,7 +132,7 @@ h2 {
   display: grid;
   place-items: center;
   background: white;
-  border: 1px solid #e3e8ed;
+  border: 1px solid #dce7f5;
   border-radius: 8px;
   cursor: pointer;
   transition:
@@ -140,8 +140,8 @@ h2 {
     background 0.18s;
 }
 .project-logo-card:hover {
-  border-color: #9db2c6;
-  background: #fafcfe;
+  border-color: #4985ce;
+  background: #edf4ff;
 }
 .project-logo-card img {
   width: 100%;
@@ -201,7 +201,7 @@ h2 {
   max-height: 88dvh;
   overflow: auto;
   padding: 0;
-  border: 1px solid #e3e8ed;
+  border: 1px solid #dce7f5;
   border-radius: 12px;
   color: #182434;
   background: #fff;
@@ -395,3 +395,6 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.project-logo-card { background: #f8fbff; }
+.portfolio-intro .eyebrow { color: #175bb5; }
