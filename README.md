@@ -64,3 +64,15 @@ As equipes 01 a 05 são espaços reservados, não entregas concluídas. A Equipe
 A Equipe Base deve importar este repositório, selecionar Vite, build `npm run build`, saída `dist` e branch de produção `main`. O `vercel.json` prepara o acesso direto às rotas. Os pushes integrados na `main` disparam novos deploys após a conexão do projeto à Vercel. Nenhuma publicação foi configurada automaticamente por este template.
 
 O repositório é privado inicialmente. Convide os colegas em Settings → Collaborators antes de compartilhar o fluxo de integração; ter o link não concede permissão de push.
+
+
+## Cards de projetos
+
+A home apresenta seis logos, em ordem, com o MedTrack por último. No desktop, a grade
+é de três colunas por duas linhas; em telas menores, adapta-se para duas ou uma coluna.
+O clique abre um diálogo com descrição, protótipo e acesso ao deploy. Escape, botão de
+fechar e clique fora da janela permitem retornar à vitrine.
+
+Cada entrada em `teamsConfig.js` inclui `logo`, `prototype`, `prototypeAlt`,
+`prototypeCaption` e `deployUrl`. As equipes 01 a 05 usam marcas provisórias e não
+possuem links de deploy inventados. A imagem do MedTrack é uma captura real da homepage publicada.

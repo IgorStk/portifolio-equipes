@@ -1,164 +1,65 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { teamsConfig } from "../data/teamsConfig";
+import ProjectModal from "../components/ProjectModal";
 export default function Home() {
-  const [search, setSearch] = useState("");
-  const filtered = teamsConfig.filter((team) =>
-    `${team.name} ${team.number} ${team.description} ${team.category}`
-      .toLocaleLowerCase("pt-BR")
-      .includes(search.toLocaleLowerCase("pt-BR")),
+  const [selected, setSelected] = useState(null);
+  const projects = [...teamsConfig].sort(
+    (a, b) => Number(a.number) - Number(b.number),
   );
   return (
     <>
-      <section className="hero container">
-        <div className="hero-copy">
-          <p className="eyebrow">
-            <span className="tiny-square" /> DESAFIO INTEGRADOR ·
-            DESENVOLVIMENTO WEB
-          </p>
+      <section className="portfolio-landing container" id="equipes">
+        <div className="portfolio-intro">
+          <p className="eyebrow">PORTFÓLIO COLETIVO · DESENVOLVIMENTO WEB</p>
           <h1>
-            Ideias diferentes.
+            Seis projetos.
             <br />
-            Um espaço <em>em comum.</em>
+            <span>Um coletivo de ideias.</span>
           </h1>
-          <p className="hero-description">
-            Um portfólio feito pela turma, para mostrar o que acontece quando
-            criatividade, tecnologia e colaboração se encontram.
+          <p>
+            Conheça os projetos da turma.
+            <br />
+            Selecione uma logo para explorar cada experiência.
           </p>
-          <a className="button" href="#equipes">
-            Conhecer as equipes <span aria-hidden="true">+</span>
-          </a>
-          <div className="hero-note">
-            <span className="avatar-stack" aria-hidden="true">
-              <i>R</i>
-              <i>V</i>
-              <i>G</i>
-            </span>
-            <span>Várias perspectivas. Uma construção coletiva.</span>
-          </div>
         </div>
-        <div className="hero-art" aria-hidden="true">
-          <div className="art-grid" />
-          <div className="art-card art-card-back">
-            <span>IDEIA + CÓDIGO</span>
-            <b>
-              Juntos,
-              <br />
-              faz sentido.
-            </b>
-            <div className="art-circle" />
-          </div>
-          <div className="art-card art-card-front">
-            <span className="art-label">PORTFÓLIO COLETIVO</span>
-            <div className="art-symbol">✳</div>
-            <div className="art-card-bottom">
-              <b>
-                Feito em
-                <br />
-                equipe.
-              </b>
-              <span>
-                REACT
-                <br />+ VITE
-              </span>
-            </div>
-          </div>
-          <span className="art-sticker">
-            criar.
-            <br />
-            conectar.
-            <br />
-            compartilhar.
-          </span>
-        </div>
-      </section>
-      <div className="principles">
-        <div className="container principles-inner">
-          <span>React + Vite</span>
-          <span>Colaboração no GitHub</span>
-          <span>Criatividade com IA</span>
-          <span>Publicação na Vercel</span>
-        </div>
-      </div>
-      <section id="equipes" className="container teams-section">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">QUEM FAZ ACONTECER</p>
-            <h2>
-              Conheça as equipes<span>.</span>
-            </h2>
-            <p>
-              Cada equipe, uma ideia. Explore os projetos e as pessoas por trás
-              deles.
-            </p>
-          </div>
-          <label className="search-label">
-            Buscar equipe
-            <input
-              type="search"
-              placeholder="Nome, número ou tema"
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-            />
-          </label>
-        </div>
-        <div className="team-grid">
-          {filtered.map((team) => (
-            <article
-              className={`team-card theme-${Number(team.number) % 3}`}
-              key={team.id}
+        <div className="project-logo-grid">
+          {projects.map((project) => (
+            <button
+              key={project.id}
+              className="project-logo-card"
+              type="button"
+              aria-label={`Conhecer o projeto ${project.name}`}
+              aria-haspopup="dialog"
+              onClick={() => setSelected(project)}
             >
-              <div className="team-card-top">
-                <span className="team-number">{team.number}</span>
-                <span className="team-status">
-                  {team.ready ? "Template disponível" : "Em preparação"}
-                </span>
-              </div>
-              <span className="category">{team.category}</span>
-              <h3>{team.name}</h3>
-              <p>{team.description}</p>
-              <Link className="team-link" to={`/equipes/${team.id}`}>
-                {team.ready ? "Conhecer a equipe" : "Ver espaço da equipe"}
-                <span aria-hidden="true">+</span>
-              </Link>
-            </article>
+              <img
+                src={project.logo}
+                alt={project.name}
+                loading="eager"
+                draggable="false"
+              />
+            </button>
           ))}
         </div>
-        {!filtered.length && (
-          <p className="empty-search" role="status">
-            Nenhuma equipe encontrada. Tente outro nome, número ou tema.
-          </p>
-        )}
+        <p className="portfolio-hint">
+          Da primeira ideia ao site publicado. Feito em equipe.
+        </p>
       </section>
-      <section id="sobre" className="about-section">
-        <div className="container about-grid">
-          <div>
-            <p className="eyebrow">O DESAFIO</p>
-            <h2>
-              Uma aula para construir.
-              <br />
-              Uma turma para somar.
-            </h2>
-          </div>
-          <div>
-            <p>
-              Este espaço reúne as entregas do Desafio Integrador: páginas
-              criadas em React + Vite, com vídeo de referência, apresentação do
-              projeto e ficha técnica de cada integrante.
-            </p>
-            <p>
-              A inteligência artificial faz parte do processo como apoio à
-              criação. A autoria, a compreensão do código e a integração são
-              trabalho de cada equipe.
-            </p>
-            <div className="about-tags">
-              <span>Código compartilhado</span>
-              <span>Identidade própria</span>
-              <span>Aprendizado coletivo</span>
-            </div>
-          </div>
-        </div>
+      <section id="sobre" className="portfolio-about container">
+        <span className="eyebrow">O DESAFIO</span>
+        <p>
+          Uma turma, diferentes perspectivas. Projetos desenvolvidos em React +
+          Vite, com colaboração no GitHub e apoio de inteligência artificial
+          durante a criação.
+        </p>
       </section>
+      {selected && (
+        <ProjectModal
+          key={selected.id}
+          project={selected}
+          onClose={() => setSelected(null)}
+        />
+      )}
     </>
   );
 }

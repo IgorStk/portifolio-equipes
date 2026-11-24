@@ -1,5 +1,5 @@
-// Registro oficial: cada equipe altera somente sua entrada neste arquivo.
-// O componente deve ser o export default de src/teams/equipe-XX/index.jsx.
+// Registro central. Edite somente a entrada da sua equipe.
+// Logos e protótipos próprios também podem ficar em src/teams/equipe-XX/.
 export const teamsConfig = [
   {
     id: "equipe-01",
@@ -7,8 +7,13 @@ export const teamsConfig = [
     name: "Equipe 01",
     category: "Projeto da turma",
     description:
-      "Um novo olhar está chegando. Em breve, conheça o projeto desta equipe.",
+      "A apresentação deste projeto está sendo preparada pela equipe. Em breve, este espaço reunirá a descrição do site, a imagem do protótipo e o link da aplicação publicada.",
     ready: false,
+    logo: "/projects/equipe-01.svg",
+    prototype: "",
+    prototypeAlt: "",
+    prototypeCaption: "",
+    deployUrl: "",
   },
   {
     id: "equipe-02",
@@ -16,8 +21,13 @@ export const teamsConfig = [
     name: "Equipe 02",
     category: "Projeto da turma",
     description:
-      "Um novo olhar está chegando. Em breve, conheça o projeto desta equipe.",
+      "A apresentação deste projeto está sendo preparada pela equipe. Em breve, este espaço reunirá a descrição do site, a imagem do protótipo e o link da aplicação publicada.",
     ready: false,
+    logo: "/projects/equipe-02.svg",
+    prototype: "",
+    prototypeAlt: "",
+    prototypeCaption: "",
+    deployUrl: "",
   },
   {
     id: "equipe-03",
@@ -25,8 +35,13 @@ export const teamsConfig = [
     name: "Equipe 03",
     category: "Projeto da turma",
     description:
-      "Um novo olhar está chegando. Em breve, conheça o projeto desta equipe.",
+      "A apresentação deste projeto está sendo preparada pela equipe. Em breve, este espaço reunirá a descrição do site, a imagem do protótipo e o link da aplicação publicada.",
     ready: false,
+    logo: "/projects/equipe-03.svg",
+    prototype: "",
+    prototypeAlt: "",
+    prototypeCaption: "",
+    deployUrl: "",
   },
   {
     id: "equipe-04",
@@ -34,8 +49,13 @@ export const teamsConfig = [
     name: "Equipe 04",
     category: "Projeto da turma",
     description:
-      "Um novo olhar está chegando. Em breve, conheça o projeto desta equipe.",
+      "A apresentação deste projeto está sendo preparada pela equipe. Em breve, este espaço reunirá a descrição do site, a imagem do protótipo e o link da aplicação publicada.",
     ready: false,
+    logo: "/projects/equipe-04.svg",
+    prototype: "",
+    prototypeAlt: "",
+    prototypeCaption: "",
+    deployUrl: "",
   },
   {
     id: "equipe-05",
@@ -43,16 +63,27 @@ export const teamsConfig = [
     name: "Equipe 05",
     category: "Projeto da turma",
     description:
-      "Um novo olhar está chegando. Em breve, conheça o projeto desta equipe.",
+      "A apresentação deste projeto está sendo preparada pela equipe. Em breve, este espaço reunirá a descrição do site, a imagem do protótipo e o link da aplicação publicada.",
     ready: false,
+    logo: "/projects/equipe-05.svg",
+    prototype: "",
+    prototypeAlt: "",
+    prototypeCaption: "",
+    deployUrl: "",
   },
   {
     id: "equipe-06",
     number: "06",
-    name: "Equipe 06",
-    category: "Base e integração",
+    name: "MedTrack",
+    category: "Saúde e tecnologia",
     description:
-      "A estrutura que conecta a turma: interface compartilhada, integração das equipes e preparação da publicação.",
+      "Plataforma de organização de consultas médicas. Pacientes preparam sintomas e dúvidas, médicos acompanham solicitações e registram orientações. O sistema reúne agenda, acompanhamento e reagendamento com confirmação do paciente.",
     ready: true,
+    logo: "/projects/medtrack.svg",
+    prototype: "/projects/medtrack-preview.jpg",
+    prototypeAlt: "Captura da homepage publicada do MedTrack",
+    prototypeCaption:
+      "Interface publicada do MedTrack.",
+    deployUrl: "https://medtrackapp.vercel.app",
   },
 ];
