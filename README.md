@@ -57,7 +57,7 @@ src/
   styles.css         Estilos compartilhados, mantidos pela Equipe Base
 ```
 
-As equipes 01 a 05 são espaços reservados, não entregas concluídas. A Equipe 06 tem uma página de template; vídeo e membros precisam ser preenchidos antes da apresentação. A lista pode ser ampliada ou reduzida conforme a turma.
+As equipes 01 a 05 são espaços reservados, não entregas concluídas. A página da Equipe 06 apresenta o MedTrack e os integrantes com suas responsabilidades; não inclui bloco de vídeo. A lista pode ser ampliada ou reduzida conforme a turma.
 
 ## Publicar na Vercel
 
